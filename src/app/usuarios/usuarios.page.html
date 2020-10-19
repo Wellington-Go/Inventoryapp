@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-padding" style="background-color:blue;">
+    <ion-input placeholder="Buscar" [(ngModel)]="produto" type="search" (input)="carregar()" required></ion-input>
+    <ion-buttons (click)="carregar()"> 
+      <ion-button >
+        <ion-icon slot ="end" name = "search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    </ion-row>
+   <ion-list>
+    <ion-list *ngFor="let user of usuarios" > 
+      <ion-item-options side="end">
+        <ion-item-option color="success" (click)="mostrar(user.id, user.numero, user.produto, user.marca,user.serie,user.categoria,user.valor,user.situacao)">
+          Mostrar
+        </ion-item-option>
+      </ion-item-options>
+    </ion-list>
+   </ion-list>
+
+  
+</ion-content>
