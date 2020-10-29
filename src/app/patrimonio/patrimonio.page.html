@@ -13,12 +13,13 @@
 </ion-header> <!-- final do cabelaçalho -->
 
 <ion-content>
-  
+  <ion-grid>
+    <ion-row *ngFor="let item of patrimonio">
+      <ion-col class="bgc">{{item.numero}}</ion-col>
+      <ion-col class="bgc">{{item.produto}}</ion-col>
+      <ion-col class="bgc">{{item.valor}}</ion-col>
+    </ion-row>
+  </ion-grid>
   
 </ion-content><!-- final do conteúdo -->
 
-<ion-footer>
-  <ion-toolbar color="tertiary">
-    <ion-title>Patrimônio</ion-title>
-  </ion-toolbar>
-</ion-footer><!-- final do rodapé -->

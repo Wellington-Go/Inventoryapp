@@ -24,13 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },
   {
-    path: 'mostrar-patrimonio/:id/:numero/:produto/:marca/:serie/:categoria/:valor/:situacao',
-    loadChildren: () => import('./mostrar-patrimonio/mostrar-patrimonio.module').then( m => m.MostrarPatrimonioPageModule)
-  },
-  {
-  path: 'mostrar-patrimonio',
-  loadChildren: () => import('./mostrar-patrimonio/mostrar-patrimonio.module').then( m => m.MostrarPatrimonioPageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
+
 ];
 
 @NgModule({
